@@ -6,7 +6,7 @@ class SongsController < ApplicationController
   end
 
   def upload
-    CSV.foreach(params[:songs].path, headers: true) do |song|
+    CSV.foreach( params[:songs].path, headers: true) do |song|
       Song.create(song_params)
     end
     redirect_to songs_path
