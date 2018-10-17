@@ -1,6 +1,6 @@
 <h1>Songs</h1>
 
-<%= form_tag songs_upload_path(@songs), multipart: true do %>
+<%= form_tag songs_path(@songs), multipart: true do %>
   <%= file_field_tag :songs %>
   <%= submit_tag "Upload Songs" %>
 <% end %>
